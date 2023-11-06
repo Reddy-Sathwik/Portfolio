@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu as om
+from streamlit_option_menu import option_menu 
 import requests
 from PIL import Image
 from streamlit_lottie import st_lottie
@@ -16,7 +16,7 @@ def l(url):
     return r.json()
 lc =l("https://lottie.host/ad96ff28-e06b-4e20-a81a-910e3f288b0a/k8sB6zbsWg.json")
 with st.container():
-    selected = om(
+    selected = option_menu(
         menu_title=None,
         options=['About', 'Projects', 'Contact','Resume'],
         icons=['person', 'code-slash', 'chat-left-text-fill','file-earmark-text'],
